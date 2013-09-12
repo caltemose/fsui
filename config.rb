@@ -37,5 +37,5 @@ activate :deploy do |deploy|
   deploy.user = "chadzilla"
   deploy.host = "chadzilla.com"
   deploy.path = "/home/chadzilla/fsui.chadzilla.com/"
-  deploy.after_build = false
+  deploy.after_build = true
 end

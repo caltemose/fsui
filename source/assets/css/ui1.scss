@@ -1,7 +1,11 @@
 @import "reset";
 
-body {
+body, button, input, textarea, select {
   font-family: Arial, sans-serif;
+}
+
+button, input, textarea, select {
+  font-size: 1em;
 }
 
 h1 {
@@ -19,12 +23,26 @@ $mainOffset: -17em;
 
 #fsContent {
   width: 80%;
-  height: 80vh;
+  height: 100vh;
   margin-left: 8%;
-  bottom: 1em;
-  border: 1px solid black;
+  padding-top: 7em;
+  bottom: 0;
+  //border: 1px solid black;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+
+  & > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 0 1em;
+      padding: 2em 1em;
+      background: #ddd;
+    }
+
+  }
 }
 
 #fsMain {
@@ -47,6 +65,7 @@ $mainOffset: -17em;
     //margin-left: -1 * $btnWidth;
     background: blue;
     border: 1px solid blue;
+    color: white;
     
     // -webkit-transform: rotate(-90deg);
     // -moz-transform: rotate(-90deg);
