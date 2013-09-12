@@ -1,4 +1,4 @@
-fsui
-====
+middleman-slim-coffee-basic
+===========================
 
-fsui
+Middleman basic template with Slim and CoffeeScript support.

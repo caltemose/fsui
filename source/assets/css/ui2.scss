@@ -1,0 +1,110 @@
+@import "reset";
+
+body, button, input, textarea, select {
+  font-family: Arial, sans-serif;
+}
+
+button, input, textarea, select {
+  font-size: 1em;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+$btnWidth: 5em;
+$btnHeight: 2.5em;
+$mainSpeed: 0.3s;
+$mainOffset: -16em;
+
+#fsContent {
+  width: 80%;
+  margin-left: 8%;
+  padding-top: 3em;
+}
+
+#fsMain {
+  position: fixed;
+  right: -13em;
+  top: 4em;
+  //background: blue;
+  //border: 1px solid blue;
+  -webkit-transition: -webkit-transform $mainSpeed ease-in-out;
+  -moz-transition: -moz-transform $mainSpeed ease-in-out;
+
+  &.selected {
+    -webkit-transform: translate3D($mainOffset,0,0);
+    -moz-transform: translate3D($mainOffset,0,0);
+  }
+
+
+  button.tab {
+    display: inline-block;
+    vertical-align: top;
+    width: $btnWidth;
+    height: $btnHeight;
+    margin: 0;
+    //margin-left: -1 * $btnWidth;
+    background: blue;
+    border: 1px solid blue;
+    
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: 3.7em 1.3em;
+    transform-origin: 1.1em 3.8em;
+    
+  }
+
+  & > ul {
+    display: inline-block;
+    vertical-align: top;
+    list-style: none;
+    margin: 0 0 0 -0.4em;
+    padding: 0;
+    width: 16em;
+    background: #ddd;
+
+    & > li {
+      margin: 0;
+      padding: 0;
+
+      & > a {
+        display: block;
+        width: 100%;
+        padding: 1em;
+        border-bottom: 1px solid #999;
+      }
+
+      &:last-child {
+
+        & > a {
+          border-bottom: none;
+        }
+
+      }
+
+    }
+
+  }
+}
+
+#fsTray {
+  position: fixed;
+  top: 0;
+  right: 10%;
+  width: $btnWidth;
+  height: $btnHeight;
+  background: red;
+  border: 1px solid red;
+}
+
+section > p:first-child {
+  margin-top: 0;
+}
